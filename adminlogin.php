@@ -13,7 +13,6 @@ $password  = mysqli_real_escape_string($con,$_POST['password']);
 $res = mysqli_query($con,"SELECT * FROM doctor WHERE doctorId = '$doctorId'");
 
 $row=mysqli_fetch_array($res,MYSQLI_ASSOC);
-// echo $row['password'];
 if ($row['password'] == $password)
 {
 $_SESSION['doctorSession'] = $row['doctorId'];
